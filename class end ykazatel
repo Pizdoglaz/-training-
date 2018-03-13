@@ -1,39 +1,71 @@
 
 #include <iostream>
 
+
 using namespace std;
+
 class Human
+
 {
-public:
-string name;
-Human *M_name;
-Human *F_name;
+
+	public:
+
+		string name;
+
+		Human *M_name;
+
+		Human *F_name;
+
 
 Human ();
+
 Human (string name)
+
 {
-this->name = name;
+
+	this->name = name;
+
 }
+
 Human (string name, Human & M_name, Human & F_name)
+
 {
-this->M_name = &M_name;
-this->F_name = &F_name;
-this->name = name;
+
+	this->M_name = &M_name;
+
+	this->F_name = &F_name;
+
+	this->name = name;
+
 }
+
 
 void print_name()
+
 {
-cout « "my name is " « name « endl;
-cout « "my rodoki is " « M_name->name « " " « F_name->name « endl;
+
+	cout << "my name is " << name << endl;
+
+	cout << "my rodoki is " << M_name->name<< " " << F_name->name<< endl;
+
 }
+
 };
 
+
 int main ()
+
 {
-Human natasha ("masha");
-Human petay ("petay");
-Human vasya("vasya", natasha, petay);
-vasya.print_name();
+
+	Human natasha ("masha");
+
+	Human petay ("petay");
+
+	Human vasya("vasya", natasha, petay);
+
+	vasya.print_name();
+
 
 return 0;
+
 }
