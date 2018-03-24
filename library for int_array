@@ -1,0 +1,44 @@
+using namespace std;
+
+void test(){
+	cout << "good" << endl;
+}
+
+class vector{
+public:
+	int array;
+	int *arr;
+
+	vector(int number){
+		this->array = number;
+		arr = new int[number];
+	}
+
+	int input(int number, int i){
+		arr[number] = i;
+		return arr[number];
+	}
+
+	int output(int z){
+		cout << arr[z] << endl;
+		return arr[z];
+	}
+
+	int edit_forward(int number){
+		int* new_arr = new int[number];
+		for(int i=0; i <= arrey; i++ ){
+			new_arr[i] = arr[i];
+		}
+		delete[] arr;
+		arr = new_arr;
+	}
+
+		int edit_back(int number){
+		int* new_arr = new int[number];
+		for(int i=0; i <= number; i++ ){
+			new_arr[i] = arr[i];
+		}
+		delete[] arr;
+		arr = new_arr;
+	}
+};
